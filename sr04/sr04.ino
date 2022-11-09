@@ -42,6 +42,9 @@ void fire()
     timer+=1;
   }
   timer = 0;
+  digitalWrite(fireLED,LOW);
+  digitalWrite(alarmPin,LOW);
+  
 }
 void loop() {
   
@@ -52,7 +55,7 @@ void loop() {
   duration = pulseIn(echoPin, HIGH);
   distance = duration * 0.034 / 2;
 
-  if (distance < 20) {
+  if (distance < 10) {
     fire();
   }
 
