@@ -21,11 +21,8 @@ void loop() {
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH);
   distance = duration * 0.034 / 2;
-  if (distance < 10) {
+  if (distance < 5) {
     digitalWrite (8, HIGH);
     digitalWrite(7, HIGH);
   }
-  Serial.print("Distance: ");
-  Serial.print(distance);
-  Serial.println(" cm");
 }
