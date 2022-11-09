@@ -28,7 +28,7 @@ void fire()
     {
       rdm = random(0, 256);
       analogWrite(fireLED, rdm);
-      analogWrite(alarmPin, i);
+      analogWrite(alarmPin, i%40);
       delay(20);
     }
 
@@ -36,7 +36,7 @@ void fire()
     {
       rdm = random(0, 256);
       analogWrite(fireLED, rdm);
-      analogWrite(alarmPin, i);
+      analogWrite(alarmPin, i%40);
       delay(20);
     }
     timer+=1;
